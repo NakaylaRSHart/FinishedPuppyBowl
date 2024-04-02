@@ -1,7 +1,8 @@
 import './App.css';
 import { useState } from 'react';
 import NewPlayerForm from "./components/NewPlayerForm";
-import AllPlayers from './components/AllPlayers'; 
+import AllPlayers from './components/AllPlayers';
+import { Routes, Route } from 'react-router-dom'; 
 
 const COHORT = "2402-NakaylaAPI"; 
 const API_URL = `https://fsa-puppy-bowl.herokuapp.com/api/${COHORT}/players`;

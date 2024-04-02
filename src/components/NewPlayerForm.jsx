@@ -11,7 +11,7 @@ const NewPlayerForm = ({baseUrl, setNeedsUpdating}) => {
       const response = await fetch(`${baseUrl}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ // Added parentheses here
+        body: JSON.stringify({
           name: name,
           breed: breed,
           imageUrl: imageUrl

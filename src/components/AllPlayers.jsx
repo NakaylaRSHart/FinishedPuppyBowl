@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import SinglePlayer from "./SinglePlayer";
+import NavBar from "./NavBar";
 
 const AllPlayers = ({ needsUpdating, setNeedsUpdating, baseUrl }) => {
   const [playerList, setPlayerList] = useState([]);

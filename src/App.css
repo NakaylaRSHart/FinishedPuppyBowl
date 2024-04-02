@@ -1,10 +1,10 @@
 
-/* body{
-  //background-color: darkblue;
-} */
+body{
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJdYNvg-z6I2alxlASESsyEb1LNDvWJ4ncIg&s);
+}
 
 .playerImage{
-  max-width: 200px;
+  width: 200px;
   border-radius: 10px;
 }
 
@@ -15,7 +15,7 @@
   max-width: 200px;
   padding: 10px;
   min-height: 300px;
-  background-color: darkgreen;
+  background-color: rgb(202, 158, 129);
   margin: 10px;
   border-radius: 10px;
 }
@@ -28,9 +28,10 @@
 }
 
 #playerName{
- background-color: darkcyan;
+ background-color: rgb(226, 137, 121);
  padding: 10px;
  border-radius: 10px;
+ border: solid rgb(105, 100, 100);
 }
 
 #playerBreed{
@@ -38,18 +39,31 @@
 }
 
 form{
-  background-color: aliceblue;
+  background-color: rgb(230, 119, 46);
   padding: 30px;
   border-radius: 20px;
 }
 
 button{
-  background-color: cadetblue;
+  background-color: rgb(230, 88, 69);
   border-radius: 20px;
-  padding: 5px;
+  padding: 10px;
+  margin: 8px;
 }
 
 button:hover{
-  background-color: forestgreen;
+  background-color: rgb(177, 94, 112);
+  border-color: azure;
   transition: 200ms;
+}
+
+h3{
+  background-color: brown;
+  padding: 20px;
+  font-size: larger;
+  display: flex;
+  justify-content: center;
+  margin-left: 80px;
+  margin-right: 80px;
+  border-radius: 20px;
 }

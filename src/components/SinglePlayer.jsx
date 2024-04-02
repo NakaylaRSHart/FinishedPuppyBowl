@@ -1,6 +1,8 @@
-
+// import { useNavigate } from 'react-router-dom';
 
 const SinglePlayer = ({ player, baseUrl, setNeedsUpdating}) => {
+
+  // const navigate = useNavigate();
 
   const handleClick = async () => {
     try {
@@ -17,8 +19,9 @@ const SinglePlayer = ({ player, baseUrl, setNeedsUpdating}) => {
     }
   }
 
-  const seeDetails = async () => {
-    
+  const seeDetails = () => {
+    <h1>Player Name</h1>
+    // navigate(`${baseUrl}/${player.id}`)
   }
 
   return (
