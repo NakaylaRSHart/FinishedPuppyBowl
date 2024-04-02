@@ -1,35 +1,33 @@
 import './App.css';
-import { puppyList } from './data.js';
 import { useState } from 'react';
+import NewPlayerForm from "./components/NewPlayerForm";
+import AllPlayers from './components/AllPlayers'; 
 
+const COHORT = "2402-NakaylaAPI"; 
+const API_URL = `https://fsa-puppy-bowl.herokuapp.com/api/${COHORT}/players`;
 
-function App() {
-  const [puppies, setPuppies] = useState(puppyList);
-  const [featPupId, setFeatPupId] = useState(null);
+const App = () => {
 
-  const featuredPup = puppies.find((pup) => pup.id === featPupId);
+  const [needsUpdating, setNeedsUpdating] = useState(true);
 
   return (
     <>
-      <div className='App'>
-        <h1>Puppy Pals</h1>
+      {/* <nav><NavBar
 
-        {puppies.map((puppy) => {
-          return <p onClick={() => setFeatPupId(puppy.id)} key={puppy.id}>{puppy.name}</p>;
-        })}
+      />
+      </nav> */}
 
-        {featPupId && <p> {} </p>}
+      <div><NewPlayerForm 
+      baseUrl={API_URL}
+      setNeedsUpdating={setNeedsUpdating}
+      />
+      </div>
 
-        {featuredPup && (
-          <div id='puppyClicked'>
-            <h2>{featuredPup.name}</h2>
-            <ul>
-              <li>Puppy Id: {featPupId}</li>
-              <li>Age: {featuredPup.age}</li>
-              <li>Email: {featuredPup.email}</li>
-            </ul>
-          </div>
-        )}
+      <div><AllPlayers 
+      baseUrl={API_URL} 
+      needsUpdating={needsUpdating} 
+      setNeedsUpdating={setNeedsUpdating}
+      />
       </div>
     </>
   );

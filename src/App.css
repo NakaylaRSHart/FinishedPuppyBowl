@@ -1,0 +1,55 @@
+
+/* body{
+  //background-color: darkblue;
+} */
+
+.playerImage{
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+#playerCard{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 200px;
+  padding: 10px;
+  min-height: 300px;
+  background-color: darkgreen;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.playerList{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 10px;
+}
+
+#playerName{
+ background-color: darkcyan;
+ padding: 10px;
+ border-radius: 10px;
+}
+
+#playerBreed{
+  max-height: 20px;
+}
+
+form{
+  background-color: aliceblue;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+button{
+  background-color: cadetblue;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+button:hover{
+  background-color: forestgreen;
+  transition: 200ms;
+}

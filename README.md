@@ -1,6 +1,7 @@
 # Puppy Bowl
 
 Requirements:
+
 -See a list of each player competing in the bowl.
 
 -Click a "See Details" button or something similar on each player that will lead you to another page view with specific details on that player, such as owner and team name.
