@@ -4,10 +4,10 @@ import NewPlayerForm from "/src/components/NewPlayerForm";
 import AllPlayers from '/src/components/AllPlayers';
 
 
-const Home = () => {
+const COHORT = "2402-NakaylaAPI"; 
+const API_URL = `https://fsa-puppy-bowl.herokuapp.com/api/${COHORT}/players`;
 
-  const COHORT = "2402-NakaylaAPI"; 
-  const API_URL = `https://fsa-puppy-bowl.herokuapp.com/api/${COHORT}/players`;
+const Home = () => {
 
 
   const [needsUpdating, setNeedsUpdating] = useState(true);

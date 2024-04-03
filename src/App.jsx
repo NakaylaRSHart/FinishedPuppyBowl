@@ -7,6 +7,8 @@ import NavBar from "./components/NavBar";
  
 
 const App = () => {
+  const COHORT = "2402-NakaylaAPI"; 
+  const API_URL = `https://fsa-puppy-bowl.herokuapp.com/api/${COHORT}/players`;
 
   // const [needsUpdating, setNeedsUpdating] = useState(true);
 
@@ -18,7 +20,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/PlayerDetails' element={<AllPlayers/>}></Route>
-        <Route path='/player/:id' element={<PlayerDetails/>}></Route>
+        <Route path='/player/:id' element={<PlayerDetails baseUrl={API_URL}/>}></Route>
         
       </Routes>
       </div>

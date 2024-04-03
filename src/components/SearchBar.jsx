@@ -17,19 +17,19 @@ const SearchBar = ({ playerList, setPlayerToDisplay}) => {
   }, [searchParam]);
 
   return (
-    <>
-      <label id="searchBarDecor">
+    <div id="searchBarDecor">
+      <label>
         Search for a Puppy:
         <input
           type='text'
-          placeholder="search" 
-          value={searchParam} // Add value attribute to reflect the current searchParam
+          placeholder="Search for puppy" 
+          value={searchParam}
           onChange={(e) => {
             setSearchParam(e.target.value.toLowerCase());
           }}
         />
       </label>
-    </>
+    </div>
   );
 };
 

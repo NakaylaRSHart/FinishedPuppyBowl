@@ -1,16 +1,22 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import API_URL from './Home'
 
 const PlayerDetails = ({ baseUrl }) => {
   const [player, setPlayerDetails] = useState({});
   const { id } = useParams();
+
+  console.log(`${baseUrl}/${id}`);
 
   useEffect(() => {
     const fetchSinglePlayer = async () => {
       try {
         const response = await fetch(`${baseUrl}/${id}`);
         const data = await response.json();
-        setPlayerDetails(data);
+
+        console.log(data.data.player)
+
+        setPlayerDetails(data.data.player);
       } catch (error) {
         console.error("Error fetching player details:", error);
       }
