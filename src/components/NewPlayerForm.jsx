@@ -45,15 +45,15 @@ const NewPlayerForm = ({baseUrl, setNeedsUpdating}) => {
       <form onSubmit={handleSubmit}>
         <label>
           Puppy Name:
-          <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+          <input type="text" id="name" placeholder='Puppy Name' value={name} onChange={(e) => setName(e.target.value)} />
         </label>
         <label>
           Puppy Breed:
-          <input type="text" id="breed" value={breed} onChange={(e) => setBreed(e.target.value)}></input>
+          <input type="text" id="breed" placeholder='Puppy Breed' value={breed} onChange={(e) => setBreed(e.target.value)}></input>
         </label>
         <label>
           Puppy Picture:
-          <input type="text" id="imageUrl" value={imageUrl} onChange={(e) => setImageUrl(e.target.value)}></input>
+          <input type="text" id="imageUrl" placeholder='Image Link Here' value={imageUrl} onChange={(e) => setImageUrl(e.target.value)}></input>
         </label>
         <button type="submit">Add Puppy</button>
       </form>

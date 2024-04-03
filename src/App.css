@@ -1,6 +1,7 @@
 
 body{
-  background-image: url(data:image/jpeg;base64,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);
+  background-image: url(https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjEwMDgtMjUtYS5qcGc.jpg);
+  margin: 0;
 }
 
 .playerImage{
@@ -23,6 +24,7 @@ body{
 .playerList{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   padding: 10px;
   margin: 10px;
 }
@@ -42,6 +44,8 @@ form{
   padding: 30px;
   border-radius: 20px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 label{
@@ -71,4 +75,34 @@ h3{
   margin-left: 80px;
   margin-right: 80px;
   border-radius: 20px;
+}
+
+ul{
+  color: azure;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+li{
+  list-style-type: none;
+  background-color: black;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.NavBarHeader{
+  background-color: darkred;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  text-align: center;
+}
+
+.SearchBarDecor{
+  background-color: saddlebrown;
 }

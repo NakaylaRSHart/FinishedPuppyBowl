@@ -1,12 +1,21 @@
 //Where Search for Puppy bar will go
 
+import { Link } from 'react-router-dom';
+
 const NavBar = () => {
   return(
     <>
-      <ul>
-        <li>Home</li>
-        <li>All Puppies</li>
-      </ul>
+      <div className='NavBarHeader'>
+          <div>
+            <h1>PUPPIES</h1>
+          </div>
+
+          <ul>
+              <li>
+                <Link to ='/'>Home</Link>
+              </li>
+          </ul>
+        </div>
     </>
   )
 }

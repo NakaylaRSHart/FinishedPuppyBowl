@@ -19,7 +19,7 @@ const SearchBar = ({ playerList, setPlayerToDisplay}) => {
   return (
     <>
       <label id="searchBarDecor">
-        Search:
+        Search for a Puppy:
         <input
           type='text'
           placeholder="search" 

@@ -1,5 +1,4 @@
-import { Link, Routes, Route, useNavigate } from "react-router-dom";
-import PlayerDetails from "./PlayerDetails";
+import { useNavigate } from "react-router-dom";
 
 const SinglePlayer = ({ player, baseUrl, setNeedsUpdating}) => {
 
@@ -20,24 +19,19 @@ const SinglePlayer = ({ player, baseUrl, setNeedsUpdating}) => {
     }
   }
 
-  const seeDetails = () => {
-    navigate('/PlayerDetails')
-  }
+  const handlePuppyDetailsClick = () => {
+    navigate(`/player/${player.id}`);
+  };
 
   return (
-    <>
-      <div id="playerCard">
-        <h4 id='playerName'>{player.name}</h4>
-        <p id='playerBreed'>{player.breed}</p>
-        <img className="playerImage" src={player.imageUrl} alt={player.name} />
-        <button onClick={handleClick}>Remove Puppy</button>
-        
-        <button onClick={seeDetails}>Puppy Details</button>
-        
-         
-      </div>
-    </>
-  )
-}
+    <div id="playerCard">
+      <h4 id='playerName'>{player.name}</h4>
+      <p id='playerBreed'>{player.breed}</p>
+      <img className="playerImage" src={player.imageUrl} alt={player.name} />
+      <button onClick={handlePuppyDetailsClick}>Puppy Details</button>
+      <button onClick={handleClick}>Remove Puppy</button>
+    </div>
+  );
+};
 
 export default SinglePlayer;
