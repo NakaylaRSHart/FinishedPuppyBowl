@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import SinglePlayer from "./SinglePlayer";
-import NavBar from "./NavBar";
+import SearchBar from "./SearchBar";
 
 const AllPlayers = ({ needsUpdating, setNeedsUpdating, baseUrl }) => {
   const [playerList, setPlayerList] = useState([]);
+  const [playerToDisplay, setPlayerToDisplay] = useState([]);
 
   useEffect(() => {
     if (needsUpdating) {
@@ -13,7 +14,7 @@ const AllPlayers = ({ needsUpdating, setNeedsUpdating, baseUrl }) => {
           const result = await response.json();
           console.log(result.data.players);
           setPlayerList(result.data.players);
-
+          setPlayerToDisplay(result.data.players);
         } catch (error) {
           console.error(error);
         }
@@ -21,15 +22,21 @@ const AllPlayers = ({ needsUpdating, setNeedsUpdating, baseUrl }) => {
       fetchAllPlayers();
       setNeedsUpdating(false);
     }
-  }, [needsUpdating, setNeedsUpdating, baseUrl]); 
+  }, [needsUpdating, setNeedsUpdating, baseUrl]);
 
   return (
     <>
+     
       <h3>Participants</h3>
 
+      <SearchBar
+        playerList={playerList}
+        setPlayerToDisplay={setPlayerToDisplay} 
+      />
+
       <div className="playerList">
-        {playerList.length ? (
-          playerList.map((player) => (
+        {playerToDisplay.length ? (
+          playerToDisplay.map((player) => (
             <SinglePlayer key={`player ${player.id}`} player={player} baseUrl={baseUrl} setNeedsUpdating={setNeedsUpdating}/> 
           ))
         ) : (
@@ -41,3 +48,4 @@ const AllPlayers = ({ needsUpdating, setNeedsUpdating, baseUrl }) => {
 };
 
 export default AllPlayers;
+

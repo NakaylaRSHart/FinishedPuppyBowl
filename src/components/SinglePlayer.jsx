@@ -1,8 +1,9 @@
-// import { useNavigate } from 'react-router-dom';
+import { Link, Routes, Route, useNavigate } from "react-router-dom";
+import PlayerDetails from "./PlayerDetails";
 
 const SinglePlayer = ({ player, baseUrl, setNeedsUpdating}) => {
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleClick = async () => {
     try {
@@ -20,8 +21,7 @@ const SinglePlayer = ({ player, baseUrl, setNeedsUpdating}) => {
   }
 
   const seeDetails = () => {
-    <h1>Player Name</h1>
-    // navigate(`${baseUrl}/${player.id}`)
+    navigate('/PlayerDetails')
   }
 
   return (
@@ -30,8 +30,11 @@ const SinglePlayer = ({ player, baseUrl, setNeedsUpdating}) => {
         <h4 id='playerName'>{player.name}</h4>
         <p id='playerBreed'>{player.breed}</p>
         <img className="playerImage" src={player.imageUrl} alt={player.name} />
-        <button onClick={handleClick}>Adopt Puppy</button>
-        <button onClick={seeDetails}>Puppy Details</button> 
+        <button onClick={handleClick}>Remove Puppy</button>
+        
+        <button onClick={seeDetails}>Puppy Details</button>
+        
+         
       </div>
     </>
   )

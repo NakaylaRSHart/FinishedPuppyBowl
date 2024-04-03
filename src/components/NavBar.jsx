@@ -3,8 +3,10 @@
 const NavBar = () => {
   return(
     <>
-    {/* Navigation Stuff/ Search Bar */}
-    <h1>PUPPY BOWL</h1>
+      <ul>
+        <li>Home</li>
+        <li>All Puppies</li>
+      </ul>
     </>
   )
 }

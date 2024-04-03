@@ -2,7 +2,10 @@ import './App.css';
 import { useState } from 'react';
 import NewPlayerForm from "./components/NewPlayerForm";
 import AllPlayers from './components/AllPlayers';
-import { Routes, Route } from 'react-router-dom'; 
+import { Route, Routes } from 'react-router-dom';
+import PlayerDetails from './components/PlayerDetails';
+import Home from "./components/Home";
+ 
 
 const COHORT = "2402-NakaylaAPI"; 
 const API_URL = `https://fsa-puppy-bowl.herokuapp.com/api/${COHORT}/players`;
@@ -13,10 +16,9 @@ const App = () => {
 
   return (
     <>
-      {/* <nav><NavBar
-
-      />
-      </nav> */}
+      {/* <div>
+        <h1>ADOPT A PUPPER</h1>
+      </div>
 
       <div><NewPlayerForm 
       baseUrl={API_URL}
@@ -29,6 +31,15 @@ const App = () => {
       needsUpdating={needsUpdating} 
       setNeedsUpdating={setNeedsUpdating}
       />
+      </div> */}
+      
+      <div>
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/PlayerDetails' element={<AllPlayers/>}></Route>
+        <Route path='/PlayerDetails/:id' element={<PlayerDetails/>}></Route>
+        
+      </Routes>
       </div>
     </>
   );
