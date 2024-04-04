@@ -30,8 +30,8 @@ const SinglePlayer = ({ player, baseUrl, setNeedsUpdating }) => {
     <div id="playerCard">
       <h4 id='playerName'>{player.name}</h4>
       <img className="playerImage" src={player.imageUrl} alt={player.name} />
-      <button onClick={handlePuppyDetailsClick} className= 'btn btn-outline-light'>Puppy Details</button>
-      <button onClick={handleClick} className= 'btn btn-outline-warning'>Remove Puppy</button>
+      <button onClick={handlePuppyDetailsClick} className= 'btn btn-outline-light'>Furbaby Details</button>
+      <button onClick={handleClick} className= 'btn btn-outline-warning'>Remove Furbaby</button>
     </div>
   );
 };

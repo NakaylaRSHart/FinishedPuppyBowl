@@ -7,7 +7,7 @@ const NavBar = () => {
     <>
       <div className="NavBarHeader" >
           <div>
-            <h1>PUPPIES</h1>
+            <h1>Cute Furbabies</h1>
           </div>
 
           <div>

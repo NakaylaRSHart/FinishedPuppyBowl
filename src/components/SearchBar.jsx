@@ -19,10 +19,10 @@ const SearchBar = ({ playerList, setPlayerToDisplay}) => {
   return (
     <div className="navbar bg-body-tertiary" data-bs-theme="dark">
       <label id="wordsForSearchBar">
-        Search for a Puppy:
+        Search for a Furbaby:
         <input
           type='text'
-          placeholder="Search for puppy" 
+          placeholder="Search for furbaby" 
           value={searchParam}
           onChange={(e) => {
             setSearchParam(e.target.value.toLowerCase());

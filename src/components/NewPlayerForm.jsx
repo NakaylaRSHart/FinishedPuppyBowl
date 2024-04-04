@@ -40,22 +40,22 @@ const NewPlayerForm = ({baseUrl, setNeedsUpdating}) => {
 
   return (
     <>
-      <h3>Add A Puppy</h3>
+      <h3>Add A Furbaby</h3>
 
       <form onSubmit={handleSubmit}>
         <label>
-          Puppy Name:
-          <input type="text" id="name" placeholder='Puppy Name' value={name} onChange={(e) => setName(e.target.value)} />
+          Furbaby Name:
+          <input type="text" id="name" placeholder='Furbaby Name' value={name} onChange={(e) => setName(e.target.value)} />
         </label>
         <label>
-          Puppy Breed:
-          <input type="text" id="breed" placeholder='Puppy Breed' value={breed} onChange={(e) => setBreed(e.target.value)}></input>
+        Furbaby Breed:
+          <input type="text" id="breed" placeholder='Furbaby Breed' value={breed} onChange={(e) => setBreed(e.target.value)}></input>
         </label>
         <label>
-          Puppy Picture:
+        Furbaby Picture:
           <input type="text" id="imageUrl" placeholder='Image Link Here' value={imageUrl} onChange={(e) => setImageUrl(e.target.value)}></input>
         </label>
-        <button type="submit" className= 'btn btn-outline-light'>Add Puppy</button>
+        <button type="submit" className= 'btn btn-outline-light'>Add Furbaby</button>
       </form>
     </>
   );
