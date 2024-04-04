@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import API_URL from './Home'
 
 const PlayerDetails = ({ baseUrl }) => {
@@ -31,6 +32,7 @@ const PlayerDetails = ({ baseUrl }) => {
       <p>Breed: {player.breed}</p>
       <img className="playerImage" src={player.imageUrl} alt={player.name} />
       <p>Status: {player.status}</p>
+      <Link className='btn btn-outline-light' to ='/'>Back</Link>
     </div>
   );
 };

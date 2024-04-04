@@ -13,7 +13,7 @@ body{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  max-width: 200px;
+  max-width: 300px;
   padding: 10px;
   min-height: 300px;
   background-color: rgb(104, 54, 18);
@@ -101,8 +101,9 @@ li{
   width: 100%;
   display: flex;
   justify-content: center;
-  /* flex-direction: column; */
+  flex-direction: column;
   text-align: center;
+  padding: 30px;
 }
 
 h1{
@@ -122,4 +123,10 @@ h1{
   margin-right: 30%;
   margin-left: 30%;
   border-radius: 20px;
+  padding: 30px;
+}
+
+#wordsForSearchBar{
+  color: brown;
+  padding: 5px;
 }

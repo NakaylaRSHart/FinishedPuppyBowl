@@ -17,8 +17,8 @@ const SearchBar = ({ playerList, setPlayerToDisplay}) => {
   }, [searchParam]);
 
   return (
-    <div id="searchBarDecor">
-      <label>
+    <div className="navbar bg-body-tertiary" data-bs-theme="dark">
+      <label id="wordsForSearchBar">
         Search for a Puppy:
         <input
           type='text'

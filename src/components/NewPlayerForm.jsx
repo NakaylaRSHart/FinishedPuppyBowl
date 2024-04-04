@@ -55,7 +55,7 @@ const NewPlayerForm = ({baseUrl, setNeedsUpdating}) => {
           Puppy Picture:
           <input type="text" id="imageUrl" placeholder='Image Link Here' value={imageUrl} onChange={(e) => setImageUrl(e.target.value)}></input>
         </label>
-        <button type="submit">Add Puppy</button>
+        <button type="submit" className= 'btn btn-outline-light'>Add Puppy</button>
       </form>
     </>
   );
